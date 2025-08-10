@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Simple Animation</title>
+<title>Araba Animasyonu</title>
 <style>
   body {
     display: flex;
@@ -12,25 +12,27 @@
     background-color: #f0f0f0;
     overflow: hidden;
   }
-  .box {
-    width: 100px;
-    height: 100px;
-    background-color: #3498db;
-    animation: moveAndColor 4s infinite alternate;
+  .car-container {
+    animation: drive 6s infinite alternate;
   }
-  @keyframes moveAndColor {
+  .car-image {
+    width: 300px;
+    height: auto;
+    display: block;
+  }
+  @keyframes drive {
     0% {
-      transform: translateX(-200px) rotate(0deg);
-      background-color: #3498db;
+      transform: translateX(-300px);
     }
     100% {
-      transform: translateX(200px) rotate(360deg);
-      background-color: #e74c3c;
+      transform: translateX(300px);
     }
   }
 </style>
 </head>
 <body>
-  <div class="box"></div>
+  <div class="car-container">
+    <img src="http://googleusercontent.com/image_collection/image_retrieval/17017667322609246978_1" alt="Araba Resmi" class="car-image">
+  </div>
 </body>
 </html>
